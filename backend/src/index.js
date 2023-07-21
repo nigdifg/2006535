@@ -1,7 +1,12 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 const port = 4000;
+app.use(cors({
+    origin:'http://localhost:3000'
+}));
+
 
 const alltrains = [
     {
